@@ -1,7 +1,7 @@
 d3-cms-physics
 ==============
 
-A d3 visualization of physics papers published by the CMS experiment at the LHC.
+A d3 visualization of physics papers published by the ATLAS experiment at the LHC.
 
 How?
 

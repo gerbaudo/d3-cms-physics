@@ -21,10 +21,11 @@ ofile_name = 'papers.json'
 ofile = open(ofile_name, 'w')
 oline = '['
 
-pags = ['QCD','EWK','HIG',
-        'TOP','HIN','EXO',
-        'FWD','SUS','BPH',
-        'SMP', 'FSQ', 'B2G']
+# see list at https://twiki.cern.ch/twiki/bin/view/AtlasPublic/Publications
+pags = ['HIGG','EXOT', 'STDM',
+        'BPHY','TOPQ','SUSY',
+        'HION',
+        ]
 
 arxivs = []
 
@@ -34,7 +35,7 @@ cds = InvenioConnector(cds_url)
 total = 0
 
 for pag in pags:
-    results = cds.search(p=pag,c="CMS Papers",f="reportnumber",rg="1000")
+    results = cds.search(p=pag,c="ATLAS Papers",f="reportnumber",rg="1000")
 
     print 'There are', len(results), pag+' papers'
     total += len(results)
@@ -110,19 +111,6 @@ for pag in pags:
 
 print total, 'papers in total'
 print len(arxivs)
-print '+1 HIG paper (the Science paper)'
-
-# What's this?
-# Well, the Higgs Science paper does not seem to have a
-# full record and is missing a proper date, PAG code, and arxiv.
-# So for now, add it by-hand.
-sci = {}
-sci['title'] = 'A New Boson with a Mass of 125 GeV Observed with the CMS Experiment at the Large Hadron Collider'
-sci['date'] = '21-12-2012'
-sci['url'] = 'https://cds.cern.ch/record/1529911/'
-sci['type'] = 'HIG'
-sci['duplicate'] = 'false'
-oline += str(json.dumps(sci,sort_keys=True))+','
 
 oline = oline[:-1]
 oline += ']'
