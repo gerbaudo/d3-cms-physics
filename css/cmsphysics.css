@@ -16,9 +16,9 @@ body {
   font: bold 14px Helvetica;
 }
 
-text.sus, text.top,
-text.hin, text.hig, text.fwd,
-text.smp, text.b2g {
+text.susy, text.topq,
+text.hion, text.higg, text.bphy,
+text.stdm, text.exot {
  fill: #666;
 }
 
@@ -27,7 +27,7 @@ text.bph {
   font: bold 10px Helvetica;
 }
 
-text.exo, text.smp {
+text.exo, text.stdm {
   fill: #666;
   font: bold 8px Helvetica;
 }
@@ -56,61 +56,61 @@ path.exo, path.exoall {
   stroke: #aec7e8;
 }
 
-circle.smp, circle.smpall, #smp {
+circle.stdm, circle.stdmall, #stdm {
   fill: #ffbb78;
   stroke: #ff7f0e;
   color: #ff7f0e;
 }
 
-path.smp, path.smpall {
+path.stdm, path.stdmall {
   fill:none;
   stroke-width: 2;
   stroke: #ffbb78;
 }
 
-circle.sus, circle.susall, #sus {
+circle.susy, circle.susyall, #susy {
   fill: #98df8a;
   stroke: #2ca02c;
   color: #2ca02c;
 }
 
-path.sus, path.susall {
+path.susy, path.susyall {
   fill:none;
   stroke-width: 2;
   stroke: #98df8a;
 }
 
-circle.top, circle.topall, #top {
+circle.topq, circle.topqall, #topq {
   fill: #c5b0d5;
   stroke: #9467bd;
   color: #9467bd;
 }
 
-path.top, path.topall {
+path.topq, path.topqall {
   fill:none;
   stroke-width: 2;
   stroke: #c5b0d5;
 }
 
-circle.hin, circle.hinall, #hin {
+circle.hion, circle.hionall, #hion {
   fill: #c49c94;
   stroke: #8c564b;
   color: #8c564b;
 }
 
-path.hin, path.hinall {
+path.hion, path.hionall {
   fill:none;
   stroke-width: 2;
   stroke: #c49c94;
 }
 
-circle.hig, circle.higall, #hig {
+circle.higg, circle.higgall, #higg {
   fill: #ff9896;
   stroke: #d62728;
   color: #d62728;
 }
 
-path.hig, path.higall {
+path.higg, path.higgall {
   fill:none;
   stroke-width: 2;
   stroke: #ff9896;
@@ -128,25 +128,25 @@ path.bph, path.bphall {
   stroke: #f7b6d2;
 }
 
-circle.fwd, circle.fwdall, #fwd {
+circle.bphy, circle.bphyall, #bphy {
   fill: #c7c7c7;
   stroke: #7f7f7f;
   color: #7f7f7f;
 }
 
-path.fwd, path.fwdall {
+path.bphy, path.bphyall {
   fill:none;
   stroke-width: 2;
   stroke: #c7c7c7;
 }
 
-circle.b2g, circle.b2gall, #b2g {
+circle.exot, circle.exotall, #exot {
   fill: #dbdb8d;
   stroke: #bcbd22;
   color: #bcbd22;
 }
 
-path.b2g, path.b2gall {
+path.exot, path.exotall {
   fill:none;
   stroke-width: 2;
   stroke: #dbdb8d;

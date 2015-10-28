@@ -22,7 +22,8 @@ var m = {top:50, right:50, bottom:75, left:50},
     yaxis = d3.svg.axis().scale(y).orient('left').tickSize(5.0).tickSubdivide(true).tickFormat(d3.format('d')),
     svg, yrule, max_length, papers_length, duplicates;
 
-var all_papers, qcds, bphs, ewks, tops, higs, suss, exos, hins, fwds, smps, b2gs;
+//var all_papers, qcds, bphs, ewks, tops, higs, suss, exos, hins, fwds, smps, b2gs;
+var all_papers, higg, exot, stdm, bphy, topq, susy, hion    
 var showing = 'all';
 
 function text_mouseover() {
@@ -308,15 +309,13 @@ function show(data, id, text) {
 }
 
 function show_total() { show(all_papers, 'total', false); }
-function show_bph() { show(bphs, 'bph', true); }
-function show_top() { show(tops, 'top', true); }
-function show_hig() { show(higs, 'hig', true); }
-function show_sus() { show(suss, 'sus', true); }
-function show_exo() { show(exos, 'exo', true); }
-function show_hin() { show(hins, 'hin', true); }
-function show_fwd() { show(fwds, 'fwd', true); }
-function show_smp() { show(smps, 'smp', true); }
-function show_b2g() { show(b2gs, 'b2g', true); }
+function show_higg() { show(higgs, 'higg', true); }
+function show_exot() { show(exots, 'exot', true); }
+function show_stdm() { show(stdms, 'stdm', true); }
+function show_bphy() { show(bphys, 'bphy', true); }
+function show_topq() { show(topqs, 'topq', true); }
+function show_susy() { show(susys, 'susy', true); }
+function show_hion() { show(hions, 'hion', true); }
 
 function show_all() {
   handle_active('all');
@@ -325,15 +324,13 @@ function show_all() {
   y.domain([0, max_length]);
   svg.select('g.yaxis').transition().duration(1000).call(yaxis);
 
-  draw_all(bphs, 'bph');
-  draw_all(tops, 'top');
-  draw_all(higs, 'hig');
-  draw_all(suss, 'sus');
-  draw_all(exos, 'exo');
-  draw_all(hins, 'hin');
-  draw_all(fwds, 'fwd');
-  draw_all(smps, 'smp');
-  draw_all(b2gs, 'b2g');
+  draw_all(higgs, 'higg');
+  draw_all(exots, 'exot');
+  draw_all(stdms, 'stdm');
+  draw_all(bphys, 'bphy');
+  draw_all(topqs, 'topq');
+  draw_all(susys, 'susy');
+  draw_all(hions, 'hion');
 
   $('#number').text(papers_length - duplicates);
   $('#date').text(date_updated);
@@ -351,19 +348,18 @@ d3.json('./data/papers.json', function(papers) {
 
   papers_length = papers.length;
 
-  bphs = papers.filter(function(p) {return p.type=='BPH';}),
-  tops = papers.filter(function(p) {return p.type=='TOP';}),
-  higs = papers.filter(function(p) {return p.type=='HIG';}),
-  suss = papers.filter(function(p) {return p.type=='SUS';}),
-  exos = papers.filter(function(p) {return p.type=='EXO';}),
-  hins = papers.filter(function(p) {return p.type=='HIN';}),
-  fwds = papers.filter(function(p) {return (p.type=='FWD' || p.type=='FSQ');}),
-  smps = papers.filter(function(p) {return (p.type=='SMP' || p.type=='QCD' || p.type=='EWK');}),
-  b2gs = papers.filter(function(p) {return p.type=='B2G';});
+  higgs = papers.filter(function(p) {return p.type=='HIGG';}),
+  exots = papers.filter(function(p) {return p.type=='EXOT';}),
+  stdms = papers.filter(function(p) {return p.type=='STDM';}),
+  bphys = papers.filter(function(p) {return p.type=='BPHY';}),
+  topqs = papers.filter(function(p) {return p.type=='TOPQ';}),
+  susys = papers.filter(function(p) {return p.type=='SUSY';}),
+  hions = papers.filter(function(p) {return p.type=='HION';}),
 
-  max_length = d3.max([bphs,tops,higs,suss,exos,hins,fwds,smps,b2gs], function(p) {return p.length;});
+  max_length = d3.max([higgs,exots,stdms,bphys,topqs,susys,hions], function(p) {return p.length;});
   duplicates = papers.filter(function(p) {return p.duplicate == 'true';}).length
 
   init();
   show_all();
 });
+
