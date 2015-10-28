@@ -1,0 +1,165 @@
+body {
+  font: bold 12px Helvetica;
+}
+
+.bordered {
+  border: thin solid gray;
+}
+
+#controls {
+  padding-left: 100px;
+  padding-top: 10px;
+}
+
+#numbers {
+  padding-left: 275px;
+  font: bold 14px Helvetica;
+}
+
+text.susy, text.topq,
+text.hion, text.higg, text.bphy,
+text.stdm, text.exot {
+ fill: #666;
+}
+
+text.bph {
+  fill: #666;
+  font: bold 10px Helvetica;
+}
+
+text.exo, text.stdm {
+  fill: #666;
+  font: bold 8px Helvetica;
+}
+
+circle.total, #total {
+	fill: #ccc;
+	stroke: #000;
+	color: #000;
+}
+
+path.total {
+  fill:none;
+  stroke-width: 2;
+  stroke: #ccc;
+}
+
+circle.exo, circle.exoall, #exo {
+  fill: #aec7e8;
+  stroke: #1f77b4;
+  color: #1f77b4;
+}
+
+path.exo, path.exoall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #aec7e8;
+}
+
+circle.stdm, circle.stdmall, #stdm {
+  fill: #ffbb78;
+  stroke: #ff7f0e;
+  color: #ff7f0e;
+}
+
+path.stdm, path.stdmall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #ffbb78;
+}
+
+circle.susy, circle.susyall, #susy {
+  fill: #98df8a;
+  stroke: #2ca02c;
+  color: #2ca02c;
+}
+
+path.susy, path.susyall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #98df8a;
+}
+
+circle.topq, circle.topqall, #topq {
+  fill: #c5b0d5;
+  stroke: #9467bd;
+  color: #9467bd;
+}
+
+path.topq, path.topqall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #c5b0d5;
+}
+
+circle.hion, circle.hionall, #hion {
+  fill: #c49c94;
+  stroke: #8c564b;
+  color: #8c564b;
+}
+
+path.hion, path.hionall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #c49c94;
+}
+
+circle.higg, circle.higgall, #higg {
+  fill: #ff9896;
+  stroke: #d62728;
+  color: #d62728;
+}
+
+path.higg, path.higgall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #ff9896;
+}
+
+circle.bph, circle.bphall, #bph {
+  fill: #f7b6d2;
+  stroke: #e377c2;
+  color:#e377c2;
+}
+
+path.bph, path.bphall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #f7b6d2;
+}
+
+circle.bphy, circle.bphyall, #bphy {
+  fill: #c7c7c7;
+  stroke: #7f7f7f;
+  color: #7f7f7f;
+}
+
+path.bphy, path.bphyall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #c7c7c7;
+}
+
+circle.exot, circle.exotall, #exot {
+  fill: #dbdb8d;
+  stroke: #bcbd22;
+  color: #bcbd22;
+}
+
+path.exot, path.exotall {
+  fill:none;
+  stroke-width: 2;
+  stroke: #dbdb8d;
+}
+
+.btn {
+  font: bold 14px Helvetica;
+  background-color: #f9f9f9;
+}
+
+.yaxis path, .xaxis path,
+.yaxis line, .xaxis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
