@@ -3,6 +3,8 @@ d3-cms-physics
 
 A d3 visualization of physics papers published by the ATLAS experiment at the LHC.
 
+This page is hosted at http://gerbaudo.github.io/d3-cms-physics/
+
 How?
 
 * First one must fetch the paper data from the CERN Document Server using ./data/get_cds_data_PAG.py
